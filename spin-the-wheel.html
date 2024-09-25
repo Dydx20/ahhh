@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPIN THE WHEEL</title>
+
+    <link rel="icon" href="large.png" type="png">
+    <link rel="stylesheet" href="spin-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
+
+    <script src="spinWheel.js" defer></script>
+</head>
+<body>
+    <!-- Header start -->
+    <header>
+        <nav>
+            <!-- <input type="checkbox" id="show-menu">
+            <label for="show-menu" class="menu-icon"><i class='bx bx-menu' ></i></label> -->
+            <div class="content">
+                <div class="logo">
+                    <a href="spin-the-wheel.html">spinthewheel.com</a>
+                </div>
+
+                <!-- <ul class="links">
+                    <li><i class='bx bx-palette'></i>Customize</li>
+                    <li><i class='bx bx-file-blank' ></i>New</li>
+                    <li><i class='bx bx-folder-open' ></i>Open</li>
+                    <li><i class='bx bx-save' ></i>Save</li>
+                    <li><i class='bx bx-share-alt' ></i>Share</li>
+                    <li><i class='bx bx-search' ></i>Gallery</li>
+                </ul> -->
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>SPIN THE WHEEL!</h1>
+        <div class="big">
+            <div class="wheel">
+                <canvas id="canvas" width="500" height="500"></canvas>
+                <div class="center-circle" onclick="spin()">
+                    <div class="triangle"></div>
+                </div>
+            </div>
+        
+            <div id="winnerModal" class="modal">
+                <div class="modal-content">
+                    <h3>🎉Congratulations!🎉</h3>
+                    <p id="modalWinner"></p>
+                    <button onclick="closeModal()">OK</button>
+                </div>
+            </div>
+
+            <div class="inputarea" onchange="createWheel()">
+                <textarea rows="17" cols="30">
+cat
+dog
+cow
+duck
+sheep
+goat
+bird
+neko
+chicken</textarea>
+            </div>
+        </div>
+
+    </main>
+
+
+</body>
+</html>
